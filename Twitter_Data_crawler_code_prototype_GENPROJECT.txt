@@ -1,2 +1,19 @@
-SELECT *
-FROM employees;
+import tweepy
+import pandas as pd
+
+# Credentials
+
+consumer_key = 'frxFyJskSPkPvxiMu8NKUfvX8'
+
+consumer_secret = 'tCtujcAsHIZF8TSzDxKCBJbfM75v8vNEzClmuA48nSqpnC0PH0'
+
+access_token = '557446265-KT2R47ApGYDLiLMDjbYTQONxhctzAtdhbZRm39SE'
+
+access_token_secret = 'nYaLC8D3KzHPcKCRNIoNclAEiMDZ5mROmCqpZZsyheAxb'
+
+
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+
+auth.set_access_token(access_token, access_token_secret)
+
+api = tweepy.API(auth,wait_on_rate_limit=True)
